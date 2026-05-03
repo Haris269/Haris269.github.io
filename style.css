@@ -78,7 +78,7 @@ h1 {
 .contact-primary {
   margin: 0.75rem 0 0;
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .hero-nav {
@@ -111,6 +111,12 @@ h1 {
   border-radius: 28px;
   padding: 1.75rem;
   box-shadow: 0 8px 24px rgba(15, 46, 80, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.panel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(15, 46, 80, 0.1);
 }
 
 .panel-header h2 {
@@ -171,6 +177,12 @@ h1 {
   padding: 1.25rem;
   border-radius: 20px;
   background: var(--primary-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(10, 77, 140, 0.15);
 }
 
 .timeline-year {
@@ -195,6 +207,13 @@ h1 {
   border-radius: 22px;
   border: 1px solid var(--border);
   background: #f9fdff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover,
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(15, 46, 80, 0.12);
 }
 
 .experience-card span {
@@ -212,6 +231,18 @@ h1 {
   text-align: center;
   padding: 1.5rem 1.5rem 2rem;
   color: var(--muted);
+}
+
+/* Animation classes */
+.fade-out {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (max-width: 760px) {
